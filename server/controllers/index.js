@@ -8,14 +8,6 @@ module.exports = {
         .complete(function(err, results) {
           res.json(results);
         });
-      // models.messages.get((err, data) => {
-      //   if (err) {
-      //     thow(err);
-      //   } else {
-      //     res.send(data);
-      //   }
-      // });
-      //next();
     }, // a function which handles a get request for all messages
     post: function (req, res) {
       User.findorCreate({username: req.body.username})
@@ -29,14 +21,6 @@ module.exports = {
               res.sendStatus(201);
             });
         });
-      // models.messages.post(req.body.message, (err, data) => {
-      //   if (err) {
-      //     throw (err);
-      //   } else {
-      //     res.sendStatus(200);
-      //   }
-      // });
-      //next();
     } // a function which handles posting a message to the database
   },
 
@@ -47,31 +31,12 @@ module.exports = {
         .complete(function(err, results) {
           res.json(results);
         });
-
-      // models.users.get((err, data) => {
-      //   if (err) {
-      //     thow(err);
-      //   } else {
-      //     res.send(data);
-      //   }
-      // });
-      //next();
     }, // a function which handles a get request for all messages
     post: function (req, res) {
       User.create({username: req.body.username})
         .complete((err, user) => {
           res.sendStatus(201);
         });
-      // console.log('Controller', req.body);
-      // models.users.post(req.body.username, (err) => {
-      //   if (err) {
-      //     throw (err);
-      //   } else {
-      //     //res.send('Successfully posted', data);
-      //     res.sendStatus(200);
-      //   }
-      // });
-      //next();
     }
   }
 };
