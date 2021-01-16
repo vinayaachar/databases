@@ -1,6 +1,6 @@
-CREATE DATABASE chatNew;
+CREATE DATABASE chatnew;
 
-USE chatNew;
+USE chatnew;
 
 CREATE TABLE rooms (
   id INT NOT NULL AUTO_INCREMENT,
